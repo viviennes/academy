@@ -40,6 +40,12 @@ namespace Delegaty
             Console.WriteLine($"Func<int,int,int> TResult: {tResult}");
             Console.WriteLine();
 
+            //podpiecie delegata action pod funkcje 
+            Action<string> act = System.Console.WriteLine;
+            act("Hello world");
+
+            Predicate<string> pdc = String.IsNullOrEmpty;
+            Console.WriteLine(pdc(""));
         }
     }
 }
